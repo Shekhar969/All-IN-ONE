@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ageVerification</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        label,button{
+            font-size: 20px;
+            margin: 10px  0 20px 0;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+        input{
+            font-size: 20px;
+            letter-spacing: 1px;
+            cursor: pointer; 
+        }
+        #Answer{
+            font-size: 30px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let checkStatusButton = document.getElementById("CheckStatus");
+            
+            checkStatusButton.addEventListener("click", function () {
+                let userName = document.getElementById("Name").value;
+                let userAge = document.getElementById("Age").value;
+                let reply = document.getElementById("Answer");
+
+                if (userAge <= 18) {
+                    reply.innerHTML = `${userName} you are not eligible to vote.`;
+                } else {
+                    reply.innerHTML = `${userName} you are eligible to vote.`;
+                }
+            });
+        });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <label for="UserName"> Enter Your Name :</label>
+      <input type="text" name="UserName" id="Name" />
+      <label for="UserAge"> Enter Your Age :</label>
+      <input type="text" name="UserAge" id="Age" />
+      <button id="CheckStatus">Check</button>
+      <p id="Answer"></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container label{
+    font-size: 50px;
+    font-family:serif ;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 0 2% 0;
+
+}
+
+.container input{
+    font-size: 25px;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.container button{
+    font-size: 15px;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    margin: 35px;
+    &:hover{
+    box-shadow: 0 0  20px rgb(147, 229, 130);
+    }
+    cursor: pointer;
+}
