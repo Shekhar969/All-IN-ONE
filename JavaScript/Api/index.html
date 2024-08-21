@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Calling</title>
+    <script>
+    
+        let text=document.getElementById("Stat");
+    let partner = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log("Are you Single?");
+          let text=document.getElementById("Stat");
+            text.innerHTML="Are you Single?";
+          setTimeout(() => {
+            console.log("Will you accept my proposal?");
+            console.log("You have 5 seconds to think.");
+            text.innerHTML="Will you accept my proposal? "+ "You have 5 seconds to think.";
+
+            setTimeout(() => {
+              let reply = prompt("What is your decision YES/NO: ");
+              if (reply.toLowerCase() === "no") {
+                reject(new Error('Sorry I am Blind I cannot see anything'));
+              } else {
+                resolve(reply);
+              }
+            }, 5000);
+          }, 2000); 
+        }, 1000);
+      });
+      
+      partner.then((result) => {
+        console.log("Her answer is: " + result);
+      }).catch(err => {
+        console.log(err.message);
+
+        let text=document.getElementById("Stat");
+        text.innerHTML='Sorry I am Blind I cannot see anything';
+      });
+      
+      </script>
+</head>
+<body>
+    <p id="Stat"></p>
+</body>
+</html>
