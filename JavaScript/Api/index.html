@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Api Calling</title>
+    <style>
+        body{
+            font-size: 35px;
+            font-weight: 700;
+            color: rgb(149, 149, 241);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            height: 100dvh;
+            background-image: linear-gradient(145deg,rgb(192, 237, 255)  ,rgb(224, 127, 127));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
     <script>
     
         let text=document.getElementById("Stat");
     let partner = new Promise((resolve, reject) => {
         setTimeout(() => {
-          console.log("Are you Single?");
           let text=document.getElementById("Stat");
             text.innerHTML="Are you Single?";
           setTimeout(() => {
-            console.log("Will you accept my proposal?");
-            console.log("You have 5 seconds to think.");
             text.innerHTML="Will you accept my proposal? "+ "You have 5 seconds to think.";
 
             setTimeout(() => {
@@ -30,12 +41,12 @@
       });
       
       partner.then((result) => {
-        console.log("Her answer is: " + result);
-      }).catch(err => {
-        console.log(err.message);
-
+        console.log("Her answer is: " + result);    
+        let accept=document.getElementById("Stat")
+        accept.innerHTML="Hurry I Got Accepted!!!"
+    }).catch(err => {
         let text=document.getElementById("Stat");
-        text.innerHTML='Sorry I am Blind I cannot see anything';
+        text.innerHTML='Sorry I am Blind I cannot see anything hello';
       });
       
       </script>
