@@ -1,0 +1,63 @@
+
+body{
+background: rgb(255, 208, 200);
+}
+.container{
+    /* margin-top: 25%; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.container label{
+    margin: 5px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.container textarea{
+    outline: none;
+    border: none;
+    height: fit-content;
+    border-radius: 5px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    background: rgb(253, 242, 222);
+    cursor: grab;
+    height: 50px;
+}
+
+.container textarea:hover{
+    background-color: aliceblue;
+    box-shadow: 0 1px 100px rgb(158, 157, 157);
+}
+
+#btn{
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 130px;
+    outline: none;
+    border: none;
+    color: aliceblue;
+    background: rgb(255, 50, 50);
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+#btn:hover{
+    background: red;
+    box-shadow: 0 1px 100px rgb(158, 157, 157);
+
+}
+.wordcounter-container{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.wordcounter-container p{
+    margin-top: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+}

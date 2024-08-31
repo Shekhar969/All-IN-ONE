@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Counter</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <div class="wordcounter-container">
+      <p>Word Couts:<span id="wordcount">0 </span></p>
+      <p>Character Couts:<span id="chrcount">0</span></p>
+    </div>
+    <div class="container">
+      <label for="input">Input Here:</label>
+      <textarea id="input" placeholder="Type Here"></textarea>
+      <button id="btn">Clear</button>
+    </div>
+
+    <script>
+      let textElm = document.getElementById("input");
+      let clearButton = document.getElementById("btn");
+
+      textElm.addEventListener("input", function () {
+        var text = textElm.value;
+        // console.log(text);
+        document.getElementById("chrcount").innerHTML = text.length;
+
+        let countwords = text.split(" ");
+        console.log(countwords);
+        document.getElementById("wordcount").innerHTML = countwords.length;
+      });
+
+      clearButton.addEventListener("click", () => {
+        textElm.value = "";
+        document.getElementById("chrcount").innerHTML = 0; 
+        document.getElementById("wordcount").innerHTML = 0; 
+      });
+    </script>
+  </body>
+</html>

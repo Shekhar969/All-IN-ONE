@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        CRUD with JavaScript
+    </header>
+    
+    <div class="wrapper">
+        <button id="add" class="Add"><img class="addimg" src="/imgs/+add.png" alt=""> Add</button>
+        <form id="form" class="hidden">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" placeholder="Name" id="name">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="text" placeholder="Email" id="email">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="userDiv" class="user"></div>
+    <script src="script.js"></script>
+</body>
+</html>

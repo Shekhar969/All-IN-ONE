@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    border: none;
+  
+}
+
+header {
+    display: grid;
+    justify-content: center;
+    font-size: 40px;
+    font-family: cursive;
+}
+
+.wrapper {
+    display: grid;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.wrapper .Add {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    padding: 15px 10px;
+    border-radius: 50px;
+    background-color: rgb(226, 224, 224);
+    color: #000;
+    cursor: pointer;
+    width: 150px;
+    font-size: 30px;
+    font-family: serif;
+    font-weight: 600;
+}
+
+.addimg {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.Add:hover {
+    background-color: #caffed;
+    box-shadow: 0 5px 2em #14a73e98;
+}
+
+.wrapper form {
+    background: linear-gradient(96deg, #f3d1ea, #ffd5d5);
+    border-radius: 10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 30px;
+    font-family: serif;
+    font-weight: 600;
+}
+
+.wrapper form input {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    font-size: 1.5rem;
+}
+
+.wrapper form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    padding: 15px 10px;
+    border-radius: 50px;
+    background-color: rgb(255, 247, 237);
+    color: #000;
+    cursor: pointer;
+    width: 34%;
+    font-size: 21px;
+    font-family: serif;
+    font-weight: 600;
+}
+.hidden{
+     display: none !important;
+} 
